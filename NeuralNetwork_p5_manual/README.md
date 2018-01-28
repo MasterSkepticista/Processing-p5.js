@@ -26,8 +26,8 @@ Usage:
 	
 	for(var j=0;j<4;j++){
 		let guess = nn.feedForward(inp[j]);
-
+	}
 	console.log(guess);
 		
 
-	}
+	
