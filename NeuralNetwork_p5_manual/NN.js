@@ -1,21 +1,31 @@
 function sigmoid(x){
 		return 1/(1+Math.exp(-x));
+		// if(x>0){
+		// 	return x;
+		// }else{
+		// 	return 0.01*x;
+		// }
 }
 
 
 function sigmoid_deriv(x){
 
 	return x*(1-x);
+	// if(x>=0){
+	// 	return 1;
+	// }else{
+	// 	return 0;
+	// }
 }
 
 
 class NeuralNetwork {
 
-	constructor(input_nodes, hidden_nodes, output_nodes){
+	constructor(input_nodes, hidden_nodes, output_nodes, learn_rate){
 		this.input_nodes = input_nodes;
 		this.hidden_nodes = hidden_nodes;
 		this.output_nodes = output_nodes;
-
+		this.lr = learn_rate;
 		this.weights_ih = new Matrix(this.hidden_nodes, this.input_nodes);
 		this.weights_ho = new Matrix(this.output_nodes, this.hidden_nodes);
 		this.weights_ih.randomize();
@@ -70,7 +80,7 @@ class NeuralNetwork {
 
 		var who_t = Matrix.transpose(this.weights_ho);
 		var hidden_error = Matrix.dot(who_t, output_error);
-		var lr = 2;
+		var lr = this.lr;
 
 		var grad_output = Matrix.map(outputs,sigmoid_deriv);
 		grad_output.multiply(lr);

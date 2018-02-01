@@ -48,7 +48,7 @@
 
 		for(var i = 0; i < this.rows; i++){
 			for(var j = 0; j < this.cols ; j++){
-				this.data[i][j] = Math.random()*2 - 1;	//Generate randoms from 0-9
+				this.data[i][j] = Math.random()*2 -1;	//Generate randoms from 0-9
 			}
 		}
 	}
