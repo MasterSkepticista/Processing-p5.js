@@ -1,2 +1,2 @@
-# Javascript-snippets
-game/nn implementations using node.js and p5.js
+#p5.js
+Some ML libraries and games based on p5.js
