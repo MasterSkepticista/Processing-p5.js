@@ -1,10 +1,13 @@
-function sigmoid(x) {
-  return 1 / (1 + Math.exp(-x));
+function sigmoid(x){
+	return 1/(1+Math.exp(-x));
+
 }
 
-function dsigmoid(y) {
-  // return sigmoid(x) * (1 - sigmoid(x));
-  return y * (1 - y);
+
+function dsigmoid(x){
+
+	return x*(1-x);
+
 }
 
 
@@ -44,7 +47,7 @@ class NeuralNetwork {
     return output.toArray();
   }
 
-  setLearningRate(learning_rate = 0.1) {
+  setLearningRate(learning_rate = 0.3) {
     this.learning_rate = learning_rate;
   }
 
@@ -101,7 +104,7 @@ class NeuralNetwork {
     // Adjust the bias by its deltas (which is just the gradients)
     this.bias_h.add(hidden_gradient);
 
-    
+
   }
 
 }
