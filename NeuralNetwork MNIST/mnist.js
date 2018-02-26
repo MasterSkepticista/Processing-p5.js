@@ -1,5 +1,5 @@
 //mnist loader library
-
+//This can be assumed as a copy. I found this to work, source unknown for now.
 function loadMNIST(callback){
   let mnist = {};
     loadFile('train-labels-idx1-ubyte', 8)
