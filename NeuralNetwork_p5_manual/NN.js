@@ -1,21 +1,21 @@
 function sigmoid(x){
-		//return 1/(1+Math.exp(-x));
-		if(x>0){
-			return x;
-		}else{
-			return 0.01*x;
-		}
+		return 1/(1+Math.exp(-x));
+		// if(x>0){
+		// 	return x;
+		// }else{
+		// 	return 0.01*x;
+		// }
 }
 
 
 function sigmoid_deriv(x){
 
-	//return x*(1-x);
-	if(x>=0){
-		return 1;
-	}else{
-		return 0;
-	}
+	return x*(1-x);
+	// if(x>=0){
+	// 	return 1;
+	// }else{
+	// 	return 0;
+	// }
 }
 
 

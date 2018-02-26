@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="matrix.js"></script>
+		<script src="sketch.js"></script>
+		<script src="NN.js"></script>
+		<script src="mnist.js"></script>
+		<script src="libraries/p5.js"></script>
+		<script src="libraries/p5.dom.js"></script>
+		<script src="libraries/p5.sound.js"></script>
+	</head>
+
+	<style>
+		.stuff{
+			font-size: 64pt;
+		}
+		.correct{
+			color: #00CC00
+		}
+		.wrong{
+			color: #CC0000
+		}
+	</style>
+	<body>
+
+		<div id="container"></div>
+		<p id="info">
+			Label: <span class = "stuff" id="label"></span></br>
+			Guess: <span class = "stuff" id="guess"></span></br>
+			User's digit: <span class = "stuff" id="user_guess"></span>
+		</p>
+	</body>
+
+</html>
