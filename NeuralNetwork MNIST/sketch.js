@@ -30,9 +30,9 @@ function draw(){
 	//Draw the user user_digit
 	image(user_digit, 0, 0);
 	if(mouseIsPressed){
-		user_digit.fill(240);
+		user_digit.fill(250);
 		user_digit.stroke(230);
-		user_digit.strokeWeight(16);
+		user_digit.strokeWeight(12);
 		user_digit.line(mouseX, mouseY, pmouseX, pmouseY);
 	}
 }
