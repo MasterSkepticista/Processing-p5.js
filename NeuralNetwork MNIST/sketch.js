@@ -14,7 +14,7 @@ function setup(){
 		mnist = data;
 		console.log(mnist);
 	});
-	nn = new NeuralNetwork(784, 32, 10);
+	nn = new NeuralNetwork(784, 100, 10);
 }
 //**************************************Core NN work****************************
 function draw(){
@@ -22,16 +22,18 @@ function draw(){
 	background(0);
 
 	if(mnist){
+		//for(let i=0;i<5;i++){
 			train();
 			test();
+
 
 	}
 	guessUserDigit();
 	//Draw the user user_digit
 	image(user_digit, 0, 0);
 	if(mouseIsPressed){
-		user_digit.fill(250);
-		user_digit.stroke(230);
+		user_digit.fill(255);
+		user_digit.stroke(255);
 		user_digit.strokeWeight(12);
 		user_digit.line(mouseX, mouseY, pmouseX, pmouseY);
 	}
@@ -44,7 +46,7 @@ function guessUserDigit(){
 	img.loadPixels();
 	for(let i = 0; i<784; i++){
 
-		inputs[i] = img.pixels[i*4] / 255;
+		inputs[i] = img.pixels[i*4] ;
 
 	}
 	image(img, 400, 0, 200, 200);
@@ -107,7 +109,7 @@ function train(){
 		img.pixels[index+3] = 255;	//transparency alpha is 255
 	}
 	img.updatePixels();
-	image(img, 200, 0, 200, 200);
+	//image(img, 200, 0, 200, 200);
 
 	//Create label indices
 
