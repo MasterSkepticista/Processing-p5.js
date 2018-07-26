@@ -2,6 +2,7 @@ This is a 3 layer Neural Network library built on p5.js
 This is NOT an optimized version. It uses a manually designed Matrix library, so is inefficient.
 
 Usage:
+
 #Declare object with no of layers in each
 	
 	
@@ -13,7 +14,7 @@ Usage:
 	var tar = [[0],[1],[1],[0]];
 
 
-#train recursively for each (since dataset is small, multiple iterations are needed)
+#train recursively for each (since dataset is small, multiple iterations are needed. Consider randomising the training examples to reduce overfit)
 	
 	
 	for(var i=0;i<500;i++){
