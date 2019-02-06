@@ -1,2 +1,2 @@
 #p5.js
-Some ML libraries and games based on p5.js
+ANN library and misc/games based on p5.js
